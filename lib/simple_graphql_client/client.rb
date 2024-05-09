@@ -14,9 +14,10 @@ module SimpleGraphqlClient
 
     def query(gql:, variables: {})
       response = RestClient.post(@url, {
+        operation_name: operation_name,
+        variables: variables,
         query: gql,
-        variables: variables
-      }.to_json, request_options)
+      }.reject{|k,v| v.nil? || v.empty? }.to_json, request_options)
       Response.new(response)
     end
 
