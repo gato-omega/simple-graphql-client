@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     simple_graphql_client (0.4)
+      hashie (~> 5.0)
       rest-client (~> 2.1)
 
 GEM
@@ -66,7 +67,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  hashie (~> 5.0)
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 0.80)
